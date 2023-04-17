@@ -11,6 +11,8 @@
 		D7381ED229ED738300B2A2A5 /* TemporaryEmailService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7381EC729ED738200B2A2A5 /* TemporaryEmailService.framework */; };
 		D7381ED729ED738300B2A2A5 /* TemporaryEmailServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7381ED629ED738300B2A2A5 /* TemporaryEmailServiceTests.swift */; };
 		D7381ED829ED738300B2A2A5 /* TemporaryEmailService.h in Headers */ = {isa = PBXBuildFile; fileRef = D7381ECA29ED738200B2A2A5 /* TemporaryEmailService.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D7381EE329ED73B300B2A2A5 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7381EE229ED73B300B2A2A5 /* APIService.swift */; };
+		D7381EE629ED76C400B2A2A5 /* APIServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7381EE529ED76C400B2A2A5 /* APIServiceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		D7381ECB29ED738200B2A2A5 /* TemporaryEmailService.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = TemporaryEmailService.docc; sourceTree = "<group>"; };
 		D7381ED129ED738300B2A2A5 /* TemporaryEmailServiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TemporaryEmailServiceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7381ED629ED738300B2A2A5 /* TemporaryEmailServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemporaryEmailServiceTests.swift; sourceTree = "<group>"; };
+		D7381EE229ED73B300B2A2A5 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		D7381EE529ED76C400B2A2A5 /* APIServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,7 @@
 		D7381EC929ED738200B2A2A5 /* TemporaryEmailService */ = {
 			isa = PBXGroup;
 			children = (
+				D7381EE129ED73A100B2A2A5 /* APIService */,
 				D7381ECA29ED738200B2A2A5 /* TemporaryEmailService.h */,
 				D7381ECB29ED738200B2A2A5 /* TemporaryEmailService.docc */,
 			);
@@ -80,9 +85,26 @@
 		D7381ED529ED738300B2A2A5 /* TemporaryEmailServiceTests */ = {
 			isa = PBXGroup;
 			children = (
+				D7381EE429ED76B300B2A2A5 /* APIService */,
 				D7381ED629ED738300B2A2A5 /* TemporaryEmailServiceTests.swift */,
 			);
 			path = TemporaryEmailServiceTests;
+			sourceTree = "<group>";
+		};
+		D7381EE129ED73A100B2A2A5 /* APIService */ = {
+			isa = PBXGroup;
+			children = (
+				D7381EE229ED73B300B2A2A5 /* APIService.swift */,
+			);
+			path = APIService;
+			sourceTree = "<group>";
+		};
+		D7381EE429ED76B300B2A2A5 /* APIService */ = {
+			isa = PBXGroup;
+			children = (
+				D7381EE529ED76C400B2A2A5 /* APIServiceTests.swift */,
+			);
+			path = APIService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7381EE329ED73B300B2A2A5 /* APIService.swift in Sources */,
 				D7381ECC29ED738200B2A2A5 /* TemporaryEmailService.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -202,6 +225,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7381EE629ED76C400B2A2A5 /* APIServiceTests.swift in Sources */,
 				D7381ED729ED738300B2A2A5 /* TemporaryEmailServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -402,6 +426,7 @@
 		D7381EDF29ED738300B2A2A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3DAQ868NGN;
@@ -418,6 +443,7 @@
 		D7381EE029ED738300B2A2A5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3DAQ868NGN;
