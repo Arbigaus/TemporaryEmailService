@@ -24,7 +24,7 @@ final class APIService<T: Codable>: APIServiceProtocol {
 
         do {
             guard let url = URL(string: "\(baseUrl)\(endpoint)") else {
-                throw NSError(domain: "Some error", code: 0)
+                throw NSError(domain: "Invalid URL", code: 0)
             }
 
             var request = URLRequest(url: url)
@@ -33,13 +33,13 @@ final class APIService<T: Codable>: APIServiceProtocol {
 
             let (data, response) = try await URLSession.shared.data(for: request)
             guard (response as? HTTPURLResponse)?.statusCode == 200 else {
-                throw NSError(domain: "Some error", code: 0)
+                throw NSError(domain: "Response error", code: 2)
             }
 
             let decodedData = try JSONDecoder().decode(T.self, from: data)
             return decodedData
-        } catch {
-            throw NSError(domain: "Some error", code: 0)
+        } catch(let error) {
+            throw NSError(domain: error.localizedDescription, code: 1)
         }
     }
 }

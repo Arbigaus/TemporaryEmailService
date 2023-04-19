@@ -15,21 +15,29 @@ final class APIServiceTests: XCTestCase {
         let title: String
     }
 
-    func test() async {
-        let service: any APIServiceProtocol = APIService<FakeObject>(baseUrl: "https://someUrl.com/")
+    func test_getFromURL_succeddsWithDataAndResponse200() async {
+        // When
+        let expectedObject = FakeObject(id: 1, title: "Some title")
+        let jsonData = try? JSONEncoder().encode(expectedObject)
+        let response = HTTPURLResponse(url: URL(string: "https://someUrl.com/")!, statusCode: 200, httpVersion: nil, headerFields: nil)
 
+        // Given
+        URLProtocolMock.startInterceptingRequests()
+        URLProtocolMock.requestHandler = { request in
+            return (response!, jsonData)
+        }
+
+        let apiService = APIService<FakeObject>(baseUrl: "https://someUrl.com/")
+
+        // Then
         do {
-            let result = try await service.get(endpoint: "get")
-            guard let result = result as? FakeObject else {
-                XCTFail("Incorrect type of object")
-                return
-            }
-            XCTAssertEqual(result.id, 1)
+            let fetchedPost = try await apiService.get(endpoint: "getTest")
+            XCTAssertEqual(fetchedPost.id, expectedObject.id)
+            XCTAssertEqual(fetchedPost.title, expectedObject.title)
+        } catch {
+            XCTFail("Ocorreu um erro inesperado: \(error)")
         }
-        catch(let error) {
-            XCTFail("Failed with error \(error.localizedDescription)")
-        }
-
+        URLProtocolMock.stopInterceptingRequests()
     }
 }
 
@@ -42,6 +50,14 @@ class URLProtocolMock: URLProtocol {
 
     override class func canonicalRequest(for request: URLRequest) -> URLRequest {
         return request
+    }
+
+    static func startInterceptingRequests() {
+        URLProtocol.registerClass(URLProtocolMock.self)
+    }
+
+    static func stopInterceptingRequests() {
+        URLProtocol.unregisterClass(URLProtocolMock.self)
     }
 
     override func startLoading() {
