@@ -15,19 +15,27 @@ final class APIServiceTests: XCTestCase {
         let title: String
     }
 
+    override class func setUp() {
+        super.setUp()
+        URLProtocolMock.startInterceptingRequests()
+    }
+
+    override class func tearDown() {
+        URLProtocolMock.stopInterceptingRequests()
+        super.tearDown()
+    }
+
     func test_getFromURL_succeddsWithDataAndResponse200() async {
         // When
-        let expectedObject = FakeObject(id: 1, title: "Some title")
-        let jsonData = try? JSONEncoder().encode(expectedObject)
-        let response = HTTPURLResponse(url: URL(string: "https://someUrl.com/")!, statusCode: 200, httpVersion: nil, headerFields: nil)
+        let expectedObject = fakeObject()
+        let jsonData = fakeObjectData()
+        let response = HTTPURLResponse(url: anyURL(), statusCode: 200, httpVersion: nil, headerFields: nil)
+        let apiService = apiService()
 
         // Given
-        URLProtocolMock.startInterceptingRequests()
         URLProtocolMock.requestHandler = { request in
             return (response!, jsonData)
         }
-
-        let apiService = APIService<FakeObject>(baseUrl: "https://someUrl.com/")
 
         // Then
         do {
@@ -37,7 +45,27 @@ final class APIServiceTests: XCTestCase {
         } catch {
             XCTFail("Ocorreu um erro inesperado: \(error)")
         }
-        URLProtocolMock.stopInterceptingRequests()
+
+    }
+
+    private func apiService() -> APIService<FakeObject> {
+        APIService<FakeObject>(baseUrl: baseURL())
+    }
+
+    private func baseURL() -> String {
+        "https://someUrl.com/"
+    }
+
+    private func anyURL() -> URL {
+        URL(string: baseURL())!
+    }
+
+    private func fakeObject() -> FakeObject {
+        FakeObject(id: 1, title: "Some title")
+    }
+
+    private func fakeObjectData() -> Data? {
+        return try? JSONEncoder().encode(fakeObject())
     }
 }
 
