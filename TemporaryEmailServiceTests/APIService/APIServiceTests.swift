@@ -10,7 +10,7 @@ import XCTest
 
 final class APIServiceTests: XCTestCase {
 
-    struct FakeObject: Codable {
+    struct FakeObject: Codable, Equatable {
         let id: Int
         let title: String
     }
@@ -30,7 +30,7 @@ final class APIServiceTests: XCTestCase {
         let expectedObject = fakeObject()
         let jsonData = fakeObjectData()
         let response = HTTPURLResponse(url: anyURL(), statusCode: 200, httpVersion: nil, headerFields: nil)
-        let apiService = apiService()
+        let sut = makeSUT()
 
         // Given
         URLProtocolMock.requestHandler = { request in
@@ -39,16 +39,35 @@ final class APIServiceTests: XCTestCase {
 
         // Then
         do {
-            let fetchedPost = try await apiService.get(endpoint: "getTest")
-            XCTAssertEqual(fetchedPost.id, expectedObject.id)
-            XCTAssertEqual(fetchedPost.title, expectedObject.title)
+            let fetchedPost = try await sut.get(endpoint: "getTest")
+            XCTAssertEqual(fetchedPost, expectedObject)
         } catch {
             XCTFail("Ocorreu um erro inesperado: \(error)")
         }
 
     }
 
-    private func apiService() -> APIService<FakeObject> {
+    func test_getFromURL_failsOnRequestWithIncorrectData() async {
+        // When
+        let jsonData = try? JSONEncoder().encode(Data())
+        let response = HTTPURLResponse(url: anyURL(), statusCode: 200, httpVersion: nil, headerFields: nil)
+        let sut = makeSUT()
+
+        // Given
+        URLProtocolMock.requestHandler = { request in
+            return (response!, jsonData)
+        }
+
+        // Then
+        do {
+            let _ = try await sut.get(endpoint: "failTest")
+            XCTFail("Should occour some error")
+        } catch (let error as NSError) {
+            XCTAssertEqual(error.code, 1)
+        }
+    }
+
+    private func makeSUT() -> APIService<FakeObject> {
         APIService<FakeObject>(baseUrl: baseURL())
     }
 
