@@ -53,48 +53,46 @@ final class APIServiceTests: XCTestCase {
     }
 
     func test_getFromURL_failsOnRequestWithIncorrectData() async {
-        // When
         let response = makeResponse()
-
-        // Given
-        URLProtocolMock.requestHandler = { request in
-            return (response!, nil)
+        do {
+            let _ = try JSONDecoder().decode(FakeObject.self, from: Data())
+            XCTFail("Should do error")
         }
-
-        // Then
-        let result = await makeGetFromSUT(with: "incorrectData")
-
-        switch result {
-        case .success:
-            XCTFail("Should occour error, got success instead")
-        case .failure(let error):
-            XCTAssertEqual(error.code, 4864)
+        catch(let expectedError as NSError) {
+            await expect(wit: response, endpoint: "incorrectData", expectedResult: .failure(expectedError))
         }
     }
 
     func test_getFromURL_deliversErrorOnNon200HttpResponse() async {
-        // When
         let samples = [199, 201, 300, 400, 500]
 
         for sample in samples {
             let response = makeResponse(sample)
+            let expectedError: FakeResult = .failure(NSError(domain: "Response error", code: sample))
 
-            // Given
-            URLProtocolMock.requestHandler = { request in
-                return (response!, nil)
-            }
+            await expect(wit: response, endpoint: "non200Errors", expectedResult: expectedError)
+        }
+    }
 
-            // Then
-            let result = await makeGetFromSUT(with: "non200Errors")
-
-            switch result {
-            case .success:
-                XCTFail("Should occour error, occour success instead")
-            case .failure(let error):
-                XCTAssertEqual(error.code, sample)
-            }
+    private func expect(wit response: HTTPURLResponse?, data: Data? = nil, endpoint: String, expectedResult: FakeResult, file: StaticString = #filePath, line: UInt = #line) async {
+        URLProtocolMock.requestHandler = { request in
+            return (response!, data)
         }
 
+        let receivedResult = await makeGetFromSUT(with: endpoint)
+
+        switch (receivedResult, expectedResult) {
+
+        case let (.success(receivedItems), .success(expectedItems)):
+            XCTAssertEqual(receivedItems, expectedItems, file: file, line: line)
+
+        case let (.failure(receivedError), .failure(expectedError)):
+            XCTAssertEqual(receivedError.code, expectedError.code, file: file, line: line)
+
+        default:
+            XCTFail("Exptected result \(expectedResult) got \(receivedResult) instead", file: file, line: line)
+
+        }
     }
 
     private func makeGetFromSUT(with endpoint: String) async -> FakeResult {
