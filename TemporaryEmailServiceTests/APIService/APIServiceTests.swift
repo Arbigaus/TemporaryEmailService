@@ -15,6 +15,11 @@ final class APIServiceTests: XCTestCase {
         let title: String
     }
 
+    private enum FakeResult {
+        case success([FakeObject])
+        case failure(NSError)
+    }
+
     override class func setUp() {
         super.setUp()
         URLProtocolMock.startInterceptingRequests()
@@ -38,13 +43,14 @@ final class APIServiceTests: XCTestCase {
         }
 
         // Then
-        do {
-            let fetchedPost = try await sut.get(endpoint: "getTest")
-            XCTAssertEqual(fetchedPost, expectedObject)
-        } catch {
-            XCTFail("Ocorreu um erro inesperado: \(error)")
-        }
+        let result = await makeSUTGet(with: "getTest")
 
+        switch result {
+        case .success(let fakeObjects):
+            XCTAssertTrue(fakeObjects.contains(expectedObject))
+        case .failure(let error):
+            XCTFail("Ocorreu um erro inesperado: \(error.localizedDescription)")
+        }
     }
 
     func test_getFromURL_failsOnRequestWithIncorrectData() async {
@@ -58,10 +64,12 @@ final class APIServiceTests: XCTestCase {
         }
 
         // Then
-        do {
-            let _ = try await sut.get(endpoint: "failTest")
-            XCTFail("Should occour some error")
-        } catch (let error as NSError) {
+        let result = await makeSUTGet(with: "incorrectData")
+
+        switch result {
+        case .success:
+            XCTFail("Should occour error, got success instead")
+        case .failure(let error):
             XCTAssertEqual(error.code, 4864)
         }
     }
@@ -69,10 +77,10 @@ final class APIServiceTests: XCTestCase {
     func test_getFromURL_deliversErrorOnNon200HttpResponse() async {
         // When
         let samples = [199, 201, 300, 400, 500]
+        let sut = makeSUT()
 
         for sample in samples {
             let response = makeResponse(sample)
-            let sut = makeSUT()
 
             // Given
             URLProtocolMock.requestHandler = { request in
@@ -80,14 +88,27 @@ final class APIServiceTests: XCTestCase {
             }
 
             // Then
-            do {
-                let _ = try await sut.get(endpoint: "notFoundTest")
-                XCTFail("Deveria ocorrer um erro")
-            } catch (let error as NSError) {
+            let result = await makeSUTGet(with: "non200Errors")
+
+            switch result {
+            case .success:
+                XCTFail("Should occour error, occour success instead")
+            case .failure(let error):
                 XCTAssertEqual(error.code, sample)
             }
         }
 
+    }
+
+    private func makeSUTGet(with endpoint: String) async -> FakeResult {
+        let sut = makeSUT()
+
+        do {
+            let result = try await sut.get(endpoint: endpoint)
+            return .success([result])
+        } catch (let error as NSError) {
+            return .failure(error)
+        }
     }
 
     private func makeResponse(_ code: Int = 200) -> HTTPURLResponse? {
