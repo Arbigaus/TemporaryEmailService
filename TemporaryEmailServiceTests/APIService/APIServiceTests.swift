@@ -31,25 +31,10 @@ final class APIServiceTests: XCTestCase {
     }
 
     func test_getFromURL_succeddsWithDataAndResponse200() async {
-        // When
-        let expectedObject = fakeObject()
-        let jsonData = fakeObjectData()
+        let (expectedObject, jsonData) = makeObject()
         let response = makeResponse()
 
-        // Given
-        URLProtocolMock.requestHandler = { request in
-            return (response!, jsonData)
-        }
-
-        // Then
-        let result = await makeGetFromSUT(with: "getTest")
-
-        switch result {
-        case .success(let fakeObjects):
-            XCTAssertTrue(fakeObjects.contains(expectedObject))
-        case .failure(let error):
-            XCTFail("Ocorreu um erro inesperado: \(error.localizedDescription)")
-        }
+        await expect(wit: response,data: jsonData, endpoint: "success200Response", expectedResult: .success([expectedObject]))
     }
 
     func test_getFromURL_failsOnRequestWithIncorrectData() async {
@@ -122,51 +107,11 @@ final class APIServiceTests: XCTestCase {
         URL(string: baseURL())!
     }
 
-    private func fakeObject() -> FakeObject {
-        FakeObject(id: 1, title: "Some title")
+    private func makeObject() -> (FakeObject, Data?) {
+        let fakeObject = FakeObject(id: 1, title: "Some title")
+        let data = try? JSONEncoder().encode(fakeObject)
+
+        return (fakeObject, data)
     }
 
-    private func fakeObjectData() -> Data? {
-        return try? JSONEncoder().encode(fakeObject())
-    }
 }
-
-class URLProtocolMock: URLProtocol {
-    static var requestHandler: ((URLRequest) throws -> (HTTPURLResponse, Data?))?
-
-    override class func canInit(with request: URLRequest) -> Bool {
-        return true
-    }
-
-    override class func canonicalRequest(for request: URLRequest) -> URLRequest {
-        return request
-    }
-
-    static func startInterceptingRequests() {
-        URLProtocol.registerClass(URLProtocolMock.self)
-    }
-
-    static func stopInterceptingRequests() {
-        URLProtocol.unregisterClass(URLProtocolMock.self)
-    }
-
-    override func startLoading() {
-        guard let handler = URLProtocolMock.requestHandler else {
-            fatalError("Undefined handler")
-        }
-
-        do {
-            let (response, data) = try handler(request)
-            client?.urlProtocol(self, didReceive: response, cacheStoragePolicy: .notAllowed)
-            if let data = data {
-                client?.urlProtocol(self, didLoad: data)
-            }
-            client?.urlProtocolDidFinishLoading(self)
-        } catch {
-            client?.urlProtocol(self, didFailWithError: error)
-        }
-    }
-
-    override func stopLoading() {}
-}
-
