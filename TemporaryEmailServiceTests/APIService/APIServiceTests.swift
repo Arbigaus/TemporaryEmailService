@@ -29,7 +29,7 @@ final class APIServiceTests: XCTestCase {
         // When
         let expectedObject = fakeObject()
         let jsonData = fakeObjectData()
-        let response = HTTPURLResponse(url: anyURL(), statusCode: 200, httpVersion: nil, headerFields: nil)
+        let response = makeResponse()
         let sut = makeSUT()
 
         // Given
@@ -49,8 +49,7 @@ final class APIServiceTests: XCTestCase {
 
     func test_getFromURL_failsOnRequestWithIncorrectData() async {
         // When
-        let jsonData = try? JSONEncoder().encode(Data())
-        let response = HTTPURLResponse(url: anyURL(), statusCode: 200, httpVersion: nil, headerFields: nil)
+        let response = makeResponse()
         let sut = makeSUT()
 
         // Given
@@ -72,7 +71,7 @@ final class APIServiceTests: XCTestCase {
         let samples = [199, 201, 300, 400, 500]
 
         for sample in samples {
-            let response = HTTPURLResponse(url: anyURL(), statusCode: sample, httpVersion: nil, headerFields: nil)
+            let response = makeResponse(sample)
             let sut = makeSUT()
 
             // Given
@@ -89,6 +88,10 @@ final class APIServiceTests: XCTestCase {
             }
         }
 
+    }
+
+    private func makeResponse(_ code: Int = 200) -> HTTPURLResponse? {
+        HTTPURLResponse(url: anyURL(), statusCode: code, httpVersion: nil, headerFields: nil)
     }
 
     private func makeSUT() -> APIService<FakeObject> {
