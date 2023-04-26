@@ -55,7 +55,7 @@ final class APIServiceTests: XCTestCase {
 
         // Given
         URLProtocolMock.requestHandler = { request in
-            return (response!, jsonData)
+            return (response!, Data())
         }
 
         // Then
@@ -63,8 +63,32 @@ final class APIServiceTests: XCTestCase {
             let _ = try await sut.get(endpoint: "failTest")
             XCTFail("Should occour some error")
         } catch (let error as NSError) {
-            XCTAssertEqual(error.code, 1)
+            XCTAssertEqual(error.code, 4864)
         }
+    }
+
+    func test_getFromURL_deliversErrorOnNon200HttpResponse() async {
+        // When
+        let samples = [199, 201, 300, 400, 500]
+
+        for sample in samples {
+            let response = HTTPURLResponse(url: anyURL(), statusCode: sample, httpVersion: nil, headerFields: nil)
+            let sut = makeSUT()
+
+            // Given
+            URLProtocolMock.requestHandler = { request in
+                return (response!, nil)
+            }
+
+            // Then
+            do {
+                let _ = try await sut.get(endpoint: "notFoundTest")
+                XCTFail("Deveria ocorrer um erro")
+            } catch (let error as NSError) {
+                XCTAssertEqual(error.code, sample)
+            }
+        }
+
     }
 
     private func makeSUT() -> APIService<FakeObject> {
