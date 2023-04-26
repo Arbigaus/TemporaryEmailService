@@ -42,7 +42,7 @@ final class APIServiceTests: XCTestCase {
         }
 
         // Then
-        let result = await makeSUTGet(with: "getTest")
+        let result = await makeGetFromSUT(with: "getTest")
 
         switch result {
         case .success(let fakeObjects):
@@ -62,7 +62,7 @@ final class APIServiceTests: XCTestCase {
         }
 
         // Then
-        let result = await makeSUTGet(with: "incorrectData")
+        let result = await makeGetFromSUT(with: "incorrectData")
 
         switch result {
         case .success:
@@ -85,7 +85,7 @@ final class APIServiceTests: XCTestCase {
             }
 
             // Then
-            let result = await makeSUTGet(with: "non200Errors")
+            let result = await makeGetFromSUT(with: "non200Errors")
 
             switch result {
             case .success:
@@ -97,7 +97,7 @@ final class APIServiceTests: XCTestCase {
 
     }
 
-    private func makeSUTGet(with endpoint: String) async -> FakeResult {
+    private func makeGetFromSUT(with endpoint: String) async -> FakeResult {
         do {
             let result = try await makeSUT().get(endpoint: endpoint)
             return .success([result])
