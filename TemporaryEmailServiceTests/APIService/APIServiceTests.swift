@@ -35,7 +35,6 @@ final class APIServiceTests: XCTestCase {
         let expectedObject = fakeObject()
         let jsonData = fakeObjectData()
         let response = makeResponse()
-        let sut = makeSUT()
 
         // Given
         URLProtocolMock.requestHandler = { request in
@@ -56,11 +55,10 @@ final class APIServiceTests: XCTestCase {
     func test_getFromURL_failsOnRequestWithIncorrectData() async {
         // When
         let response = makeResponse()
-        let sut = makeSUT()
 
         // Given
         URLProtocolMock.requestHandler = { request in
-            return (response!, Data())
+            return (response!, nil)
         }
 
         // Then
@@ -77,7 +75,6 @@ final class APIServiceTests: XCTestCase {
     func test_getFromURL_deliversErrorOnNon200HttpResponse() async {
         // When
         let samples = [199, 201, 300, 400, 500]
-        let sut = makeSUT()
 
         for sample in samples {
             let response = makeResponse(sample)
@@ -101,10 +98,8 @@ final class APIServiceTests: XCTestCase {
     }
 
     private func makeSUTGet(with endpoint: String) async -> FakeResult {
-        let sut = makeSUT()
-
         do {
-            let result = try await sut.get(endpoint: endpoint)
+            let result = try await makeSUT().get(endpoint: endpoint)
             return .success([result])
         } catch (let error as NSError) {
             return .failure(error)
@@ -115,8 +110,10 @@ final class APIServiceTests: XCTestCase {
         HTTPURLResponse(url: anyURL(), statusCode: code, httpVersion: nil, headerFields: nil)
     }
 
-    private func makeSUT() -> APIService<FakeObject> {
-        APIService<FakeObject>(baseUrl: baseURL())
+    private func makeSUT(file: StaticString = #filePath, line: UInt = #line) -> APIService<FakeObject> {
+        let sut = APIService<FakeObject>(baseUrl: baseURL())
+        trackForMemoryLeaks(sut, file: file, line: line)
+        return sut
     }
 
     private func baseURL() -> String {
@@ -157,7 +154,7 @@ class URLProtocolMock: URLProtocol {
 
     override func startLoading() {
         guard let handler = URLProtocolMock.requestHandler else {
-            fatalError("Handler não definido.")
+            fatalError("Undefined handler")
         }
 
         do {
