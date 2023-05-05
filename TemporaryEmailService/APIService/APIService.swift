@@ -8,19 +8,27 @@
 import Foundation
 
 protocol APIServiceProtocol {
-    associatedtype T: Codable
+    associatedtype ResponseType: Decodable
+    associatedtype PayloadType: Encodable
 
-    func get(endpoint: String) async throws -> T
+    func get(endpoint: String) async throws -> ResponseType
+    func post(endpoint: String, payload: PayloadType) async throws -> ResponseType
 }
 
-final class APIService<T: Codable>: APIServiceProtocol {
+final class APIService<ResponseType: Decodable, PayloadType: Encodable>: APIServiceProtocol {
+    // MARK: - Variables
+
     let baseUrl: String
+
+    // MARK: - Intializers
 
     init(baseUrl: String) {
         self.baseUrl = baseUrl
     }
 
-    func get(endpoint: String) async throws -> T {
+    // MARK: - Methods
+
+    func get(endpoint: String) async throws -> ResponseType {
 
         do {
             guard let url = URL(string: "\(baseUrl)\(endpoint)") else {
@@ -41,9 +49,19 @@ final class APIService<T: Codable>: APIServiceProtocol {
                 throw NSError(domain: "Response error", code: statusCode)
             }
 
-            let decodedData = try JSONDecoder().decode(T.self, from: data)
+            let decodedData = try JSONDecoder().decode(ResponseType.self, from: data)
             return decodedData
         } catch(let error) {
+            throw NSError(domain: error.localizedDescription, code: error._code)
+        }
+    }
+
+    func post(endpoint: String, payload: PayloadType) async throws -> ResponseType {
+        do {
+            let data = Data()
+            let decodedData = try JSONDecoder().decode(ResponseType.self, from: data)
+            return decodedData
+        } catch (let error) {
             throw NSError(domain: error.localizedDescription, code: error._code)
         }
     }
