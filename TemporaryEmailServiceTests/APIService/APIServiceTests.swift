@@ -10,13 +10,18 @@ import XCTest
 
 final class APIServiceTests: XCTestCase {
 
-    struct FakeObject: Codable, Equatable {
+    struct FakeResponseType: Decodable, Equatable {
+        let id: Int
+        let title: String
+    }
+
+    struct FakePayloadType: Encodable, Equatable {
         let id: Int
         let title: String
     }
 
     private enum FakeResult {
-        case success([FakeObject])
+        case success([FakeResponseType])
         case failure(NSError)
     }
 
@@ -40,7 +45,7 @@ final class APIServiceTests: XCTestCase {
     func test_getFromURL_failsOnRequestWithIncorrectData() async {
         let response = makeResponse()
         do {
-            let _ = try JSONDecoder().decode(FakeObject.self, from: Data())
+            let _ = try JSONDecoder().decode(FakeResponseType.self, from: Data())
             XCTFail("Should do error")
         }
         catch(let expectedError as NSError) {
@@ -93,8 +98,8 @@ final class APIServiceTests: XCTestCase {
         HTTPURLResponse(url: anyURL(), statusCode: code, httpVersion: nil, headerFields: nil)
     }
 
-    private func makeSUT(file: StaticString = #filePath, line: UInt = #line) -> APIService<FakeObject> {
-        let sut = APIService<FakeObject>(baseUrl: baseURL())
+    private func makeSUT(file: StaticString = #filePath, line: UInt = #line) -> APIService<FakeResponseType, FakePayloadType> {
+        let sut = APIService<FakeResponseType, FakePayloadType>(baseUrl: baseURL())
         trackForMemoryLeaks(sut, file: file, line: line)
         return sut
     }
@@ -107,9 +112,10 @@ final class APIServiceTests: XCTestCase {
         URL(string: baseURL())!
     }
 
-    private func makeObject() -> (FakeObject, Data?) {
-        let fakeObject = FakeObject(id: 1, title: "Some title")
-        let data = try? JSONEncoder().encode(fakeObject)
+    private func makeObject() -> (FakeResponseType, Data?) {
+        let fakeObject = FakeResponseType(id: 1, title: "Some title")
+        let fakePayload = FakePayloadType(id: 1, title: "Some title")
+        let data = try? JSONEncoder().encode(fakePayload)
 
         return (fakeObject, data)
     }
