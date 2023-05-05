@@ -32,14 +32,19 @@ final class APIService<T: Codable>: APIServiceProtocol {
             request.addValue("application/json", forHTTPHeaderField: "Content-Type")
 
             let (data, response) = try await URLSession.shared.data(for: request)
-            guard (response as? HTTPURLResponse)?.statusCode == 200 else {
+
+            guard let statusCode = (response as? HTTPURLResponse)?.statusCode else {
                 throw NSError(domain: "Response error", code: 2)
+            }
+
+            guard statusCode == 200 else {
+                throw NSError(domain: "Response error", code: statusCode)
             }
 
             let decodedData = try JSONDecoder().decode(T.self, from: data)
             return decodedData
         } catch(let error) {
-            throw NSError(domain: error.localizedDescription, code: 1)
+            throw NSError(domain: error.localizedDescription, code: error._code)
         }
     }
 }
