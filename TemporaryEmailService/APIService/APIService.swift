@@ -58,7 +58,26 @@ final class APIService<ResponseType: Decodable, PayloadType: Encodable>: APIServ
 
     func post(endpoint: String, payload: PayloadType) async throws -> ResponseType {
         do {
-            let data = Data()
+            guard let url = URL(string: "\(baseUrl)\(endpoint)") else {
+                throw NSError(domain: "Invalid URL", code: 0)
+            }
+            let encoder = JSONEncoder()
+
+            var request = URLRequest(url: url)
+            request.httpMethod = "POST"
+            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+            request.httpBody = try encoder.encode(payload)
+
+            let (data, response) = try await URLSession.shared.data(for: request)
+
+            guard let statusCode = (response as? HTTPURLResponse)?.statusCode else {
+                throw NSError(domain: "Response error", code: 2)
+            }
+
+            guard statusCode == 200 else {
+                throw NSError(domain: "Response error", code: statusCode)
+            }
+
             let decodedData = try JSONDecoder().decode(ResponseType.self, from: data)
             return decodedData
         } catch (let error) {

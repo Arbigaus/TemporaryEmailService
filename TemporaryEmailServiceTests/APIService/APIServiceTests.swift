@@ -64,6 +64,24 @@ final class APIServiceTests: XCTestCase {
         }
     }
 
+    func test_postToURL_succeddsWithDataAndResponse200() async {
+        let (fakePayload, jsonData) = makePayload()
+        let response = makeResponse()
+
+        URLProtocolMock.requestHandler = { request in
+            return (response!, jsonData)
+        }
+
+        do {
+            let receivedResult = try await makeSUT().post(endpoint: "postTest", payload: fakePayload)
+            XCTAssertEqual(receivedResult.title, fakePayload.title)
+
+
+        } catch(let error as NSError) {
+            XCTFail("Expected succes, got \(error.localizedDescription) instead")
+        }
+    }
+
     private func expect(wit response: HTTPURLResponse?, data: Data? = nil, endpoint: String, expectedResult: FakeResult, file: StaticString = #filePath, line: UInt = #line) async {
         URLProtocolMock.requestHandler = { request in
             return (response!, data)
@@ -110,6 +128,12 @@ final class APIServiceTests: XCTestCase {
 
     private func anyURL() -> URL {
         URL(string: baseURL())!
+    }
+
+    private func makePayload() -> (FakePayloadType, Data?) {
+        let fakePayload = FakePayloadType(id: 1, title: "Fake Payload")
+        let data = try? JSONEncoder().encode(fakePayload)
+        return (fakePayload, data)
     }
 
     private func makeObject() -> (FakeResponseType, Data?) {
