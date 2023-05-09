@@ -25,6 +25,10 @@ final class APIServiceTests: XCTestCase {
         case failure(NSError)
     }
 
+    private enum RequestMethod {
+        case get, post
+    }
+
     override class func setUp() {
         super.setUp()
         URLProtocolMock.startInterceptingRequests()
@@ -36,10 +40,11 @@ final class APIServiceTests: XCTestCase {
     }
 
     func test_getFromURL_succeddsWithDataAndResponse200() async {
-        let (expectedObject, jsonData) = makeObject()
+        let (_, data) = makePayload()
+        let expectedObject = makeFakeResponseObject()
         let response = makeResponse()
 
-        await expect(wit: response,data: jsonData, endpoint: "success200Response", expectedResult: .success([expectedObject]))
+        await expect(wit: response,data: data, endpoint: "success200Response", expectedResult: .success([expectedObject]))
     }
 
     func test_getFromURL_failsOnRequestWithIncorrectData() async {
@@ -65,29 +70,40 @@ final class APIServiceTests: XCTestCase {
     }
 
     func test_postToURL_succeddsWithDataAndResponse200() async {
-        let (fakePayload, jsonData) = makePayload()
+        let (_, jsonData) = makePayload()
+        let expectedObject = makeFakeResponseObject()
         let response = makeResponse()
 
-        URLProtocolMock.requestHandler = { request in
-            return (response!, jsonData)
-        }
-
-        do {
-            let receivedResult = try await makeSUT().post(endpoint: "postTest", payload: fakePayload)
-            XCTAssertEqual(receivedResult.title, fakePayload.title)
-
-
-        } catch(let error as NSError) {
-            XCTFail("Expected succes, got \(error.localizedDescription) instead")
-        }
+        await expect(wit: response, data: jsonData, endpoint: "postTest", expectedResult: .success([expectedObject]))
     }
 
-    private func expect(wit response: HTTPURLResponse?, data: Data? = nil, endpoint: String, expectedResult: FakeResult, file: StaticString = #filePath, line: UInt = #line) async {
+    private func expect(wit response: HTTPURLResponse?,
+                        data: Data? = nil,
+                        endpoint: String,
+                        expectedResult: FakeResult,
+                        method: RequestMethod = .get,
+                        payload: FakePayloadType? = nil,
+                        file: StaticString = #filePath,
+                        line: UInt = #line) async {
         URLProtocolMock.requestHandler = { request in
             return (response!, data)
         }
 
-        let receivedResult = await makeGetFromSUT(with: endpoint)
+        var receivedResult: FakeResult?
+
+        switch method {
+        case .get:
+            receivedResult = await makeGetFromSUT(with: endpoint)
+        case .post:
+            receivedResult = await makePostFromSUT(with: endpoint, payload: payload)
+            break
+        }
+
+
+        guard let receivedResult else {
+            XCTFail("Expected some received Result, got nil instead")
+            return
+        }
 
         switch (receivedResult, expectedResult) {
 
@@ -106,6 +122,16 @@ final class APIServiceTests: XCTestCase {
     private func makeGetFromSUT(with endpoint: String) async -> FakeResult {
         do {
             let result = try await makeSUT().get(endpoint: endpoint)
+            return .success([result])
+        } catch (let error as NSError) {
+            return .failure(error)
+        }
+    }
+
+    private func makePostFromSUT(with endpoint: String, payload: FakePayloadType?) async -> FakeResult {
+        let (optionalPayload, _) = makePayload()
+        do {
+            let result = try await makeSUT().post(endpoint: "postTest", payload: payload ?? optionalPayload)
             return .success([result])
         } catch (let error as NSError) {
             return .failure(error)
@@ -131,17 +157,16 @@ final class APIServiceTests: XCTestCase {
     }
 
     private func makePayload() -> (FakePayloadType, Data?) {
-        let fakePayload = FakePayloadType(id: 1, title: "Fake Payload")
+        let fakePayload = FakePayloadType(id: 1, title: "Some Title")
         let data = try? JSONEncoder().encode(fakePayload)
         return (fakePayload, data)
     }
 
-    private func makeObject() -> (FakeResponseType, Data?) {
-        let fakeObject = FakeResponseType(id: 1, title: "Some title")
-        let fakePayload = FakePayloadType(id: 1, title: "Some title")
-        let data = try? JSONEncoder().encode(fakePayload)
+    private func makeFakeResponseObject() -> FakeResponseType {
+        let (fakePayload, _) = makePayload()
+        let fakeObject = FakeResponseType(id: fakePayload.id, title: fakePayload.title)
 
-        return (fakeObject, data)
+        return fakeObject
     }
 
 }
