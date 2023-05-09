@@ -18,26 +18,38 @@ protocol APIServiceProtocol {
 final class APIService<ResponseType: Decodable, PayloadType: Encodable>: APIServiceProtocol {
     // MARK: - Variables
 
-    let baseUrl: String
+    let baseURL: String
 
     // MARK: - Intializers
 
     init(baseUrl: String) {
-        self.baseUrl = baseUrl
+        self.baseURL = baseUrl
+    }
+
+    private enum Method: String {
+        case get  = "GET"
+        case post = "POST"
     }
 
     // MARK: - Methods
 
+    private func createURLRequest(_ endpoint: String, method: Method, body: Data? = nil) -> URLRequest {
+        guard let url = URL(string: "\(baseURL)\(endpoint)") else {
+            fatalError("URL inválida.")
+        }
+
+        var request = URLRequest(url: url)
+        request.httpMethod = method.rawValue
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpBody = body
+
+        return request
+    }
+
     func get(endpoint: String) async throws -> ResponseType {
 
         do {
-            guard let url = URL(string: "\(baseUrl)\(endpoint)") else {
-                throw NSError(domain: "Invalid URL", code: 0)
-            }
-
-            var request = URLRequest(url: url)
-            request.httpMethod = "GET"
-            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+            var request = createURLRequest(endpoint, method: .get)
 
             let (data, response) = try await URLSession.shared.data(for: request)
 
@@ -58,15 +70,8 @@ final class APIService<ResponseType: Decodable, PayloadType: Encodable>: APIServ
 
     func post(endpoint: String, payload: PayloadType) async throws -> ResponseType {
         do {
-            guard let url = URL(string: "\(baseUrl)\(endpoint)") else {
-                throw NSError(domain: "Invalid URL", code: 0)
-            }
-            let encoder = JSONEncoder()
-
-            var request = URLRequest(url: url)
-            request.httpMethod = "POST"
-            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-            request.httpBody = try encoder.encode(payload)
+            let body = try JSONEncoder().encode(payload)
+            var request = createURLRequest(endpoint, method: .post, body: body)
 
             let (data, response) = try await URLSession.shared.data(for: request)
 
