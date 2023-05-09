@@ -25,7 +25,7 @@ final class APIServiceTests: XCTestCase {
         case failure(NSError)
     }
 
-    private enum RequestMethod {
+    private enum RequestMethod: CaseIterable {
         case get, post
     }
 
@@ -58,14 +58,16 @@ final class APIServiceTests: XCTestCase {
         }
     }
 
-    func test_getFromURL_deliversErrorOnNon200HttpResponse() async {
+    func test_allMethods_deliversErrorOnNon200HttpResponse() async {
         let samples = [199, 201, 300, 400, 500]
 
         for sample in samples {
-            let response = makeResponse(sample)
-            let expectedError: FakeResult = .failure(NSError(domain: "Response error", code: sample))
+            for method in RequestMethod.allCases {
+                let response = makeResponse(sample)
+                let expectedError: FakeResult = .failure(NSError(domain: "Response error", code: sample))
 
-            await expect(wit: response, endpoint: "non200Errors", expectedResult: expectedError)
+                await expect(wit: response, endpoint: "non200Errors", expectedResult: expectedError, method: method)
+            }
         }
     }
 
@@ -88,22 +90,7 @@ final class APIServiceTests: XCTestCase {
         URLProtocolMock.requestHandler = { request in
             return (response!, data)
         }
-
-        var receivedResult: FakeResult?
-
-        switch method {
-        case .get:
-            receivedResult = await makeGetFromSUT(with: endpoint)
-        case .post:
-            receivedResult = await makePostFromSUT(with: endpoint, payload: payload)
-            break
-        }
-
-
-        guard let receivedResult else {
-            XCTFail("Expected some received Result, got nil instead")
-            return
-        }
+        let receivedResult = await makeReceivedResult(from: method, in: endpoint, with: payload)
 
         switch (receivedResult, expectedResult) {
 
@@ -116,6 +103,15 @@ final class APIServiceTests: XCTestCase {
         default:
             XCTFail("Exptected result \(expectedResult) got \(receivedResult) instead", file: file, line: line)
 
+        }
+    }
+
+    private func makeReceivedResult(from method: RequestMethod, in endpoint: String, with payload: FakePayloadType?) async -> FakeResult {
+        switch method {
+        case .get:
+            return await makeGetFromSUT(with: endpoint)
+        case .post:
+            return await makePostFromSUT(with: endpoint, payload: payload)
         }
     }
 
