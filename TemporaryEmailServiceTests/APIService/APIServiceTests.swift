@@ -26,7 +26,7 @@ final class APIServiceTests: XCTestCase {
     }
 
     private enum RequestMethod: CaseIterable {
-        case get, post
+        case get, post, put
     }
 
     override class func setUp() {
@@ -76,7 +76,23 @@ final class APIServiceTests: XCTestCase {
         let expectedObject = makeFakeResponseObject()
         let response = makeResponse()
 
-        await expect(wit: response, data: jsonData, endpoint: "postTest", expectedResult: .success([expectedObject]))
+        await expect(wit: response,
+                     data: jsonData,
+                     endpoint: "postTest",
+                     expectedResult: .success([expectedObject]),
+                     method: .post)
+    }
+
+    func test_putToURL_succeddsWithDataAndResponse200() async {
+        let (_, jsonData) = makePayload()
+        let expectedObject = makeFakeResponseObject()
+        let response = makeResponse()
+
+        await expect(wit: response,
+                     data: jsonData,
+                     endpoint: "pustTest",
+                     expectedResult: .success([expectedObject]),
+                     method: .put)
     }
 
     private func expect(wit response: HTTPURLResponse?,
@@ -112,6 +128,8 @@ final class APIServiceTests: XCTestCase {
             return await makeGetFromSUT(with: endpoint)
         case .post:
             return await makePostFromSUT(with: endpoint, payload: payload)
+        case .put:
+            return await makePostFromSUT(with: endpoint, payload: payload)
         }
     }
 
@@ -128,6 +146,16 @@ final class APIServiceTests: XCTestCase {
         let (optionalPayload, _) = makePayload()
         do {
             let result = try await makeSUT().post(endpoint: "postTest", payload: payload ?? optionalPayload)
+            return .success([result])
+        } catch (let error as NSError) {
+            return .failure(error)
+        }
+    }
+
+    private func makePutFromSUT(with endpoint: String, payload: FakePayloadType?) async -> FakeResult {
+        let (optionalPayload, _) = makePayload()
+        do {
+            let result = try await makeSUT().put(endpoint: "postTest", payload: payload ?? optionalPayload)
             return .success([result])
         } catch (let error as NSError) {
             return .failure(error)

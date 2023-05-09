@@ -29,6 +29,7 @@ final class APIService<ResponseType: Decodable, PayloadType: Encodable>: APIServ
     private enum Method: String {
         case get  = "GET"
         case post = "POST"
+        case put  = "PUT"
     }
 
     // MARK: - Methods
@@ -80,6 +81,18 @@ final class APIService<ResponseType: Decodable, PayloadType: Encodable>: APIServ
 
             return try handleRequest(with: data, and: response)
 
+        } catch (let error) {
+            throw NSError(domain: error.localizedDescription, code: error._code)
+        }
+    }
+
+    func put(endpoint: String, payload: PayloadType) async throws -> ResponseType {
+        do {
+            let body = try JSONEncoder().encode(payload)
+            let request = createURLRequest(endpoint, method: .put, body: body)
+            let (data, response) = try await URLSession.shared.data(for: request)
+
+            return try handleRequest(with: data, and: response)
         } catch (let error) {
             throw NSError(domain: error.localizedDescription, code: error._code)
         }
