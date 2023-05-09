@@ -46,23 +46,27 @@ final class APIService<ResponseType: Decodable, PayloadType: Encodable>: APIServ
         return request
     }
 
+    private func handleRequest(with data: Data, and response: URLResponse) throws -> ResponseType {
+        guard let statusCode = (response as? HTTPURLResponse)?.statusCode else {
+            throw NSError(domain: "Response error", code: 2)
+        }
+
+        guard statusCode == 200 else {
+            throw NSError(domain: "Response error", code: statusCode)
+        }
+
+        let decodedData = try JSONDecoder().decode(ResponseType.self, from: data)
+        return decodedData
+    }
+
     func get(endpoint: String) async throws -> ResponseType {
 
         do {
             var request = createURLRequest(endpoint, method: .get)
-
             let (data, response) = try await URLSession.shared.data(for: request)
 
-            guard let statusCode = (response as? HTTPURLResponse)?.statusCode else {
-                throw NSError(domain: "Response error", code: 2)
-            }
+            return try handleRequest(with: data, and: response)
 
-            guard statusCode == 200 else {
-                throw NSError(domain: "Response error", code: statusCode)
-            }
-
-            let decodedData = try JSONDecoder().decode(ResponseType.self, from: data)
-            return decodedData
         } catch(let error) {
             throw NSError(domain: error.localizedDescription, code: error._code)
         }
@@ -72,19 +76,10 @@ final class APIService<ResponseType: Decodable, PayloadType: Encodable>: APIServ
         do {
             let body = try JSONEncoder().encode(payload)
             var request = createURLRequest(endpoint, method: .post, body: body)
-
             let (data, response) = try await URLSession.shared.data(for: request)
 
-            guard let statusCode = (response as? HTTPURLResponse)?.statusCode else {
-                throw NSError(domain: "Response error", code: 2)
-            }
+            return try handleRequest(with: data, and: response)
 
-            guard statusCode == 200 else {
-                throw NSError(domain: "Response error", code: statusCode)
-            }
-
-            let decodedData = try JSONDecoder().decode(ResponseType.self, from: data)
-            return decodedData
         } catch (let error) {
             throw NSError(domain: error.localizedDescription, code: error._code)
         }
