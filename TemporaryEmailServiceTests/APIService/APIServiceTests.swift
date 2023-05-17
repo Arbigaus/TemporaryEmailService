@@ -162,7 +162,7 @@ final class APIServiceTests: XCTestCase {
         }
     }
 
-    private func makeResponse(_ code: Int = 200) -> HTTPURLResponse? {
+    private func makeResponse(_ code: Int = .random(in: 200...204)) -> HTTPURLResponse? {
         HTTPURLResponse(url: anyURL(), statusCode: code, httpVersion: nil, headerFields: nil)
     }
 
