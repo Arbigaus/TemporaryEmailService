@@ -59,7 +59,7 @@ final class APIServiceTests: XCTestCase {
     }
 
     func test_allMethods_deliversErrorOnNon200HttpResponse() async {
-        let samples = [199, 201, 300, 400, 500]
+        let samples = [199, 300, 400, 500]
 
         for sample in samples {
             for method in RequestMethod.allCases {

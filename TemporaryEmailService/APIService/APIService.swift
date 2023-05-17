@@ -54,7 +54,7 @@ final class APIService<ResponseType: Decodable, PayloadType: Encodable>: APIServ
             throw NSError(domain: "Response error", code: 2)
         }
 
-        guard statusCode == 200 else {
+        guard statusCode >= 200 && statusCode <= 204 else {
             throw NSError(domain: "Response error", code: statusCode)
         }
 
