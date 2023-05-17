@@ -23,7 +23,7 @@ final class APIService<ResponseType: Decodable, PayloadType: Encodable>: APIServ
 
     // MARK: - Intializers
 
-    init(baseUrl: String) {
+    init(baseUrl: String = "https://api.mail.gw/") {
         self.baseURL = baseUrl
     }
 
