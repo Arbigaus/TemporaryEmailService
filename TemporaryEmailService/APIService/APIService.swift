@@ -13,6 +13,7 @@ protocol APIServiceProtocol {
 
     func get(endpoint: String) async throws -> ResponseType
     func post(endpoint: String, payload: PayloadType) async throws -> ResponseType
+    func put(endpoint: String, payload: PayloadType) async throws -> ResponseType
 }
 
 final class APIService<ResponseType: Decodable, PayloadType: Encodable>: APIServiceProtocol {
@@ -27,9 +28,10 @@ final class APIService<ResponseType: Decodable, PayloadType: Encodable>: APIServ
     }
 
     private enum Method: String {
-        case get  = "GET"
-        case post = "POST"
-        case put  = "PUT"
+        case get    = "GET"
+        case put    = "PUT"
+        case post   = "POST"
+        case delete = "DELETE"
     }
 
     // MARK: - Methods
@@ -63,7 +65,7 @@ final class APIService<ResponseType: Decodable, PayloadType: Encodable>: APIServ
     func get(endpoint: String) async throws -> ResponseType {
 
         do {
-            var request = createURLRequest(endpoint, method: .get)
+            let request = createURLRequest(endpoint, method: .get)
             let (data, response) = try await URLSession.shared.data(for: request)
 
             return try handleRequest(with: data, and: response)
@@ -76,7 +78,7 @@ final class APIService<ResponseType: Decodable, PayloadType: Encodable>: APIServ
     func post(endpoint: String, payload: PayloadType) async throws -> ResponseType {
         do {
             let body = try JSONEncoder().encode(payload)
-            var request = createURLRequest(endpoint, method: .post, body: body)
+            let request = createURLRequest(endpoint, method: .post, body: body)
             let (data, response) = try await URLSession.shared.data(for: request)
 
             return try handleRequest(with: data, and: response)
