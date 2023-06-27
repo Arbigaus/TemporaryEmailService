@@ -8,20 +8,16 @@
 import Foundation
 
 public protocol AuthenticationServiceProtocol {
+    func createAccount(email: String, password: String) async throws -> EmailAccount
     func makeAuthentication() async throws -> Autentication
 }
 
-public struct Autentication: Decodable {
-    let id: String
-    let token: String
-}
-
 public final class AuthenticationService: AuthenticationServiceProtocol {
-    private let service = APIService<Autentication, PayloadType>()
+    private var service: APIServiceProtocol = APIService()
 
     public func makeAuthentication() async throws -> Autentication {
         do {
-            let response = try await service.get(endpoint: "token")
+            let response: Autentication = try await service.get(endpoint: "token")
 
             return response
         } catch(let error) {
@@ -29,4 +25,14 @@ public final class AuthenticationService: AuthenticationServiceProtocol {
         }
     }
 
+    public func createAccount(email: String, password: String) async throws -> EmailAccount {
+        do {
+            let accountToCreate = AccountCreation(address: email, password: password)
+            let response: EmailAccount = try await service.post(endpoint: "accounts", payload: accountToCreate)
+
+            return response
+        } catch(let error) {
+            throw(error)
+        }
+    }
 }

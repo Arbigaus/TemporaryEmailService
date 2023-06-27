@@ -3,4 +3,1390 @@
    uuid = "A695063D-ABD3-4016-8935-68FF0792FC48"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4B2772FD-1B0C-4C17-8959-D48F6F8CD66A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "Yes"
+            filePath = "TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "testCreateAccount_WhenSuccessful_ReturnsEmailAccount()"
+            landmarkType = "7">
+            <Actions>
+               <BreakpointActionProxy
+                  ActionExtensionID = "Xcode.BreakpointAction.DebuggerCommand">
+                  <ActionContent
+                     consoleCommand = "po jsonString">
+                  </ActionContent>
+               </BreakpointActionProxy>
+            </Actions>
+            <Locations>
+               <Location
+                  uuid = "4B2772FD-1B0C-4C17-8959-D48F6F8CD66A - a2a7a49912196d2b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for TemporaryEmailServiceTests.AuthenticationServiceTests.testCreateAccount() async throws -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "86"
+                  endingLineNumber = "86"
+                  offsetFromSymbolStart = "1721">
+               </Location>
+               <Location
+                  uuid = "4B2772FD-1B0C-4C17-8959-D48F6F8CD66A - 31edca6858d3d48c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for TemporaryEmailServiceTests.AuthenticationServiceTests.testCreateAccount() async throws -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "86"
+                  endingLineNumber = "86"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "4B2772FD-1B0C-4C17-8959-D48F6F8CD66A - 1640e6f21daae9c9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for TemporaryEmailServiceTests.AuthenticationServiceTests.testCreateAccount() async throws -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "86"
+                  endingLineNumber = "86"
+                  offsetFromSymbolStart = "73">
+               </Location>
+               <Location
+                  uuid = "4B2772FD-1B0C-4C17-8959-D48F6F8CD66A - adfd46269f652bd8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for TemporaryEmailServiceTests.AuthenticationServiceTests.testCreateAccount() async throws -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "86"
+                  endingLineNumber = "86"
+                  offsetFromSymbolStart = "66">
+               </Location>
+               <Location
+                  uuid = "4B2772FD-1B0C-4C17-8959-D48F6F8CD66A - a2a7a49912196d69"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for TemporaryEmailServiceTests.AuthenticationServiceTests.testCreateAccount() async throws -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "998">
+               </Location>
+               <Location
+                  uuid = "4B2772FD-1B0C-4C17-8959-D48F6F8CD66A - 31edca6858d3d4ce"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for TemporaryEmailServiceTests.AuthenticationServiceTests.testCreateAccount() async throws -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "45">
+               </Location>
+               <Location
+                  uuid = "4B2772FD-1B0C-4C17-8959-D48F6F8CD66A - 1640e6f21daae98b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for TemporaryEmailServiceTests.AuthenticationServiceTests.testCreateAccount() async throws -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "73">
+               </Location>
+               <Location
+                  uuid = "4B2772FD-1B0C-4C17-8959-D48F6F8CD66A - adfd46269f652b9a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for TemporaryEmailServiceTests.AuthenticationServiceTests.testCreateAccount() async throws -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "66">
+               </Location>
+               <Location
+                  uuid = "4B2772FD-1B0C-4C17-8959-D48F6F8CD66A - a2a7a49912196d69"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for TemporaryEmailServiceTests.AuthenticationServiceTests.testCreateAccount() async throws -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "946">
+               </Location>
+               <Location
+                  uuid = "4B2772FD-1B0C-4C17-8959-D48F6F8CD66A - a2a7a49912196d08"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for TemporaryEmailServiceTests.AuthenticationServiceTests.testCreateAccount() async throws -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "1029">
+               </Location>
+               <Location
+                  uuid = "4B2772FD-1B0C-4C17-8959-D48F6F8CD66A - 31edca6858d3d4af"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for TemporaryEmailServiceTests.AuthenticationServiceTests.testCreateAccount() async throws -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "4B2772FD-1B0C-4C17-8959-D48F6F8CD66A - 1640e6f21daae9ea"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for TemporaryEmailServiceTests.AuthenticationServiceTests.testCreateAccount() async throws -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "83">
+               </Location>
+               <Location
+                  uuid = "4B2772FD-1B0C-4C17-8959-D48F6F8CD66A - adfd46269f652bfb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for TemporaryEmailServiceTests.AuthenticationServiceTests.testCreateAccount() async throws -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "146">
+               </Location>
+               <Location
+                  uuid = "4B2772FD-1B0C-4C17-8959-D48F6F8CD66A - a2a7a49912196d08"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for TemporaryEmailServiceTests.AuthenticationServiceTests.testCreateAccount() async throws -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "1490">
+               </Location>
+               <Location
+                  uuid = "4B2772FD-1B0C-4C17-8959-D48F6F8CD66A - 1640e6f21daae9ea"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for TemporaryEmailServiceTests.AuthenticationServiceTests.testCreateAccount() async throws -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "86">
+               </Location>
+               <Location
+                  uuid = "4B2772FD-1B0C-4C17-8959-D48F6F8CD66A - adfd46269f652bfb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for TemporaryEmailServiceTests.AuthenticationServiceTests.testCreateAccount() async throws -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "152">
+               </Location>
+               <Location
+                  uuid = "4B2772FD-1B0C-4C17-8959-D48F6F8CD66A - a2a7a49912196d08"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for TemporaryEmailServiceTests.AuthenticationServiceTests.testCreateAccount() async throws -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "945">
+               </Location>
+               <Location
+                  uuid = "4B2772FD-1B0C-4C17-8959-D48F6F8CD66A - 1640e6f21daae9ea"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for TemporaryEmailServiceTests.AuthenticationServiceTests.testCreateAccount() async throws -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "77">
+               </Location>
+               <Location
+                  uuid = "4B2772FD-1B0C-4C17-8959-D48F6F8CD66A - a2a7a49912196dc2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for TemporaryEmailServiceTests.AuthenticationServiceTests.testCreateAccount() async throws -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "79"
+                  endingLineNumber = "79"
+                  offsetFromSymbolStart = "945">
+               </Location>
+               <Location
+                  uuid = "4B2772FD-1B0C-4C17-8959-D48F6F8CD66A - 31edca6858d3d465"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for TemporaryEmailServiceTests.AuthenticationServiceTests.testCreateAccount() async throws -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "79"
+                  endingLineNumber = "79"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "4B2772FD-1B0C-4C17-8959-D48F6F8CD66A - 1640e6f21daae920"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for TemporaryEmailServiceTests.AuthenticationServiceTests.testCreateAccount() async throws -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "79"
+                  endingLineNumber = "79"
+                  offsetFromSymbolStart = "77">
+               </Location>
+               <Location
+                  uuid = "4B2772FD-1B0C-4C17-8959-D48F6F8CD66A - adfd46269f652b31"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for TemporaryEmailServiceTests.AuthenticationServiceTests.testCreateAccount() async throws -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "79"
+                  endingLineNumber = "79"
+                  offsetFromSymbolStart = "146">
+               </Location>
+               <Location
+                  uuid = "4B2772FD-1B0C-4C17-8959-D48F6F8CD66A - a2a7a49912196dc2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for TemporaryEmailServiceTests.AuthenticationServiceTests.testCreateAccount() async throws -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "79"
+                  endingLineNumber = "79"
+                  offsetFromSymbolStart = "910">
+               </Location>
+               <Location
+                  uuid = "4B2772FD-1B0C-4C17-8959-D48F6F8CD66A - 31edca6858d3d465"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for TemporaryEmailServiceTests.AuthenticationServiceTests.testCreateAccount() async throws -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "79"
+                  endingLineNumber = "79"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  uuid = "4B2772FD-1B0C-4C17-8959-D48F6F8CD66A - 1640e6f21daae920"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for TemporaryEmailServiceTests.AuthenticationServiceTests.testCreateAccount() async throws -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "79"
+                  endingLineNumber = "79"
+                  offsetFromSymbolStart = "108">
+               </Location>
+               <Location
+                  uuid = "4B2772FD-1B0C-4C17-8959-D48F6F8CD66A - adfd46269f652b31"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for TemporaryEmailServiceTests.AuthenticationServiceTests.testCreateAccount() async throws -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "79"
+                  endingLineNumber = "79"
+                  offsetFromSymbolStart = "153">
+               </Location>
+               <Location
+                  uuid = "4B2772FD-1B0C-4C17-8959-D48F6F8CD66A - a2a7a49912196a23"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for TemporaryEmailServiceTests.AuthenticationServiceTests.testCreateAccount() async throws -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "757">
+               </Location>
+               <Location
+                  uuid = "4B2772FD-1B0C-4C17-8959-D48F6F8CD66A - 31edca6858d3d384"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for TemporaryEmailServiceTests.AuthenticationServiceTests.testCreateAccount() async throws -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  uuid = "4B2772FD-1B0C-4C17-8959-D48F6F8CD66A - 1640e6f21daaeec1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for TemporaryEmailServiceTests.AuthenticationServiceTests.testCreateAccount() async throws -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "95">
+               </Location>
+               <Location
+                  uuid = "4B2772FD-1B0C-4C17-8959-D48F6F8CD66A - adfd46269f652cd0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for TemporaryEmailServiceTests.AuthenticationServiceTests.testCreateAccount() async throws -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "137">
+               </Location>
+               <Location
+                  uuid = "4B2772FD-1B0C-4C17-8959-D48F6F8CD66A - 4a957a359b0f15af"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for TemporaryEmailServiceTests.AuthenticationServiceTests.testCreateAccount_WhenSuccessful_ReturnsEmailAccount() async throws -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "757">
+               </Location>
+               <Location
+                  uuid = "4B2772FD-1B0C-4C17-8959-D48F6F8CD66A - a738bad25045a833"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for TemporaryEmailServiceTests.AuthenticationServiceTests.testCreateAccount_WhenSuccessful_ReturnsEmailAccount() async throws -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  uuid = "4B2772FD-1B0C-4C17-8959-D48F6F8CD66A - 9fac0c063582a8ad"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for TemporaryEmailServiceTests.AuthenticationServiceTests.testCreateAccount_WhenSuccessful_ReturnsEmailAccount() async throws -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "95">
+               </Location>
+               <Location
+                  uuid = "4B2772FD-1B0C-4C17-8959-D48F6F8CD66A - c5cf86ee7ec4092c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for TemporaryEmailServiceTests.AuthenticationServiceTests.testCreateAccount_WhenSuccessful_ReturnsEmailAccount() async throws -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "137">
+               </Location>
+               <Location
+                  uuid = "4B2772FD-1B0C-4C17-8959-D48F6F8CD66A - 4a957a359b0f1261"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for TemporaryEmailServiceTests.AuthenticationServiceTests.testCreateAccount_WhenSuccessful_ReturnsEmailAccount() async throws -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "80"
+                  endingLineNumber = "80"
+                  offsetFromSymbolStart = "757">
+               </Location>
+               <Location
+                  uuid = "4B2772FD-1B0C-4C17-8959-D48F6F8CD66A - a738bad25045affd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for TemporaryEmailServiceTests.AuthenticationServiceTests.testCreateAccount_WhenSuccessful_ReturnsEmailAccount() async throws -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "80"
+                  endingLineNumber = "80"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  uuid = "4B2772FD-1B0C-4C17-8959-D48F6F8CD66A - 9fac0c063582af63"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for TemporaryEmailServiceTests.AuthenticationServiceTests.testCreateAccount_WhenSuccessful_ReturnsEmailAccount() async throws -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "80"
+                  endingLineNumber = "80"
+                  offsetFromSymbolStart = "95">
+               </Location>
+               <Location
+                  uuid = "4B2772FD-1B0C-4C17-8959-D48F6F8CD66A - c5cf86ee7ec40ee2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for TemporaryEmailServiceTests.AuthenticationServiceTests.testCreateAccount_WhenSuccessful_ReturnsEmailAccount() async throws -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "80"
+                  endingLineNumber = "80"
+                  offsetFromSymbolStart = "137">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EFD1FA6B-DBE9-446C-B2B1-B8245880B82A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "Yes"
+            filePath = "TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "testCreateAccount_WhenSuccessful_ReturnsEmailAccount()"
+            landmarkType = "7">
+            <Actions>
+               <BreakpointActionProxy
+                  ActionExtensionID = "Xcode.BreakpointAction.DebuggerCommand">
+                  <ActionContent
+                     consoleCommand = "po &quot;Mock =&gt; \(Data(jsonString.utf8))&quot;">
+                  </ActionContent>
+               </BreakpointActionProxy>
+            </Actions>
+            <Locations>
+               <Location
+                  uuid = "EFD1FA6B-DBE9-446C-B2B1-B8245880B82A - a2a7a49912196d69"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for TemporaryEmailServiceTests.AuthenticationServiceTests.testCreateAccount() async throws -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "998">
+               </Location>
+               <Location
+                  uuid = "EFD1FA6B-DBE9-446C-B2B1-B8245880B82A - 31edca6858d3d4ce"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for TemporaryEmailServiceTests.AuthenticationServiceTests.testCreateAccount() async throws -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "45">
+               </Location>
+               <Location
+                  uuid = "EFD1FA6B-DBE9-446C-B2B1-B8245880B82A - 1640e6f21daae98b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for TemporaryEmailServiceTests.AuthenticationServiceTests.testCreateAccount() async throws -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "73">
+               </Location>
+               <Location
+                  uuid = "EFD1FA6B-DBE9-446C-B2B1-B8245880B82A - adfd46269f652b9a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for TemporaryEmailServiceTests.AuthenticationServiceTests.testCreateAccount() async throws -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "66">
+               </Location>
+               <Location
+                  uuid = "EFD1FA6B-DBE9-446C-B2B1-B8245880B82A - a2a7a49912196d69"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for TemporaryEmailServiceTests.AuthenticationServiceTests.testCreateAccount() async throws -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "946">
+               </Location>
+               <Location
+                  uuid = "EFD1FA6B-DBE9-446C-B2B1-B8245880B82A - a2a7a49912196d08"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for TemporaryEmailServiceTests.AuthenticationServiceTests.testCreateAccount() async throws -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "1029">
+               </Location>
+               <Location
+                  uuid = "EFD1FA6B-DBE9-446C-B2B1-B8245880B82A - 31edca6858d3d4af"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for TemporaryEmailServiceTests.AuthenticationServiceTests.testCreateAccount() async throws -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "EFD1FA6B-DBE9-446C-B2B1-B8245880B82A - 1640e6f21daae9ea"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for TemporaryEmailServiceTests.AuthenticationServiceTests.testCreateAccount() async throws -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "83">
+               </Location>
+               <Location
+                  uuid = "EFD1FA6B-DBE9-446C-B2B1-B8245880B82A - adfd46269f652bfb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for TemporaryEmailServiceTests.AuthenticationServiceTests.testCreateAccount() async throws -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "146">
+               </Location>
+               <Location
+                  uuid = "EFD1FA6B-DBE9-446C-B2B1-B8245880B82A - a2a7a49912196d08"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for TemporaryEmailServiceTests.AuthenticationServiceTests.testCreateAccount() async throws -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "1490">
+               </Location>
+               <Location
+                  uuid = "EFD1FA6B-DBE9-446C-B2B1-B8245880B82A - 1640e6f21daae9ea"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for TemporaryEmailServiceTests.AuthenticationServiceTests.testCreateAccount() async throws -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "86">
+               </Location>
+               <Location
+                  uuid = "EFD1FA6B-DBE9-446C-B2B1-B8245880B82A - adfd46269f652bfb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for TemporaryEmailServiceTests.AuthenticationServiceTests.testCreateAccount() async throws -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "152">
+               </Location>
+               <Location
+                  uuid = "EFD1FA6B-DBE9-446C-B2B1-B8245880B82A - a2a7a49912196d08"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for TemporaryEmailServiceTests.AuthenticationServiceTests.testCreateAccount() async throws -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "945">
+               </Location>
+               <Location
+                  uuid = "EFD1FA6B-DBE9-446C-B2B1-B8245880B82A - 1640e6f21daae9ea"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for TemporaryEmailServiceTests.AuthenticationServiceTests.testCreateAccount() async throws -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "77">
+               </Location>
+               <Location
+                  uuid = "EFD1FA6B-DBE9-446C-B2B1-B8245880B82A - a2a7a49912196dc2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for TemporaryEmailServiceTests.AuthenticationServiceTests.testCreateAccount() async throws -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "79"
+                  endingLineNumber = "79"
+                  offsetFromSymbolStart = "945">
+               </Location>
+               <Location
+                  uuid = "EFD1FA6B-DBE9-446C-B2B1-B8245880B82A - 31edca6858d3d465"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for TemporaryEmailServiceTests.AuthenticationServiceTests.testCreateAccount() async throws -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "79"
+                  endingLineNumber = "79"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "EFD1FA6B-DBE9-446C-B2B1-B8245880B82A - 1640e6f21daae920"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for TemporaryEmailServiceTests.AuthenticationServiceTests.testCreateAccount() async throws -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "79"
+                  endingLineNumber = "79"
+                  offsetFromSymbolStart = "77">
+               </Location>
+               <Location
+                  uuid = "EFD1FA6B-DBE9-446C-B2B1-B8245880B82A - adfd46269f652b31"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for TemporaryEmailServiceTests.AuthenticationServiceTests.testCreateAccount() async throws -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "79"
+                  endingLineNumber = "79"
+                  offsetFromSymbolStart = "146">
+               </Location>
+               <Location
+                  uuid = "EFD1FA6B-DBE9-446C-B2B1-B8245880B82A - a2a7a49912196dc2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for TemporaryEmailServiceTests.AuthenticationServiceTests.testCreateAccount() async throws -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "79"
+                  endingLineNumber = "79"
+                  offsetFromSymbolStart = "910">
+               </Location>
+               <Location
+                  uuid = "EFD1FA6B-DBE9-446C-B2B1-B8245880B82A - 31edca6858d3d465"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for TemporaryEmailServiceTests.AuthenticationServiceTests.testCreateAccount() async throws -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "79"
+                  endingLineNumber = "79"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  uuid = "EFD1FA6B-DBE9-446C-B2B1-B8245880B82A - 1640e6f21daae920"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for TemporaryEmailServiceTests.AuthenticationServiceTests.testCreateAccount() async throws -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "79"
+                  endingLineNumber = "79"
+                  offsetFromSymbolStart = "108">
+               </Location>
+               <Location
+                  uuid = "EFD1FA6B-DBE9-446C-B2B1-B8245880B82A - adfd46269f652b31"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for TemporaryEmailServiceTests.AuthenticationServiceTests.testCreateAccount() async throws -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "79"
+                  endingLineNumber = "79"
+                  offsetFromSymbolStart = "153">
+               </Location>
+               <Location
+                  uuid = "EFD1FA6B-DBE9-446C-B2B1-B8245880B82A - a2a7a49912196a23"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for TemporaryEmailServiceTests.AuthenticationServiceTests.testCreateAccount() async throws -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "757">
+               </Location>
+               <Location
+                  uuid = "EFD1FA6B-DBE9-446C-B2B1-B8245880B82A - 31edca6858d3d384"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for TemporaryEmailServiceTests.AuthenticationServiceTests.testCreateAccount() async throws -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  uuid = "EFD1FA6B-DBE9-446C-B2B1-B8245880B82A - 1640e6f21daaeec1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for TemporaryEmailServiceTests.AuthenticationServiceTests.testCreateAccount() async throws -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "95">
+               </Location>
+               <Location
+                  uuid = "EFD1FA6B-DBE9-446C-B2B1-B8245880B82A - adfd46269f652cd0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for TemporaryEmailServiceTests.AuthenticationServiceTests.testCreateAccount() async throws -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "137">
+               </Location>
+               <Location
+                  uuid = "EFD1FA6B-DBE9-446C-B2B1-B8245880B82A - 4a957a359b0f15af"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for TemporaryEmailServiceTests.AuthenticationServiceTests.testCreateAccount_WhenSuccessful_ReturnsEmailAccount() async throws -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "757">
+               </Location>
+               <Location
+                  uuid = "EFD1FA6B-DBE9-446C-B2B1-B8245880B82A - a738bad25045a833"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for TemporaryEmailServiceTests.AuthenticationServiceTests.testCreateAccount_WhenSuccessful_ReturnsEmailAccount() async throws -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  uuid = "EFD1FA6B-DBE9-446C-B2B1-B8245880B82A - 9fac0c063582a8ad"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for TemporaryEmailServiceTests.AuthenticationServiceTests.testCreateAccount_WhenSuccessful_ReturnsEmailAccount() async throws -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "95">
+               </Location>
+               <Location
+                  uuid = "EFD1FA6B-DBE9-446C-B2B1-B8245880B82A - c5cf86ee7ec4092c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for TemporaryEmailServiceTests.AuthenticationServiceTests.testCreateAccount_WhenSuccessful_ReturnsEmailAccount() async throws -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "137">
+               </Location>
+               <Location
+                  uuid = "EFD1FA6B-DBE9-446C-B2B1-B8245880B82A - 4a957a359b0f1261"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for TemporaryEmailServiceTests.AuthenticationServiceTests.testCreateAccount_WhenSuccessful_ReturnsEmailAccount() async throws -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "80"
+                  endingLineNumber = "80"
+                  offsetFromSymbolStart = "757">
+               </Location>
+               <Location
+                  uuid = "EFD1FA6B-DBE9-446C-B2B1-B8245880B82A - a738bad25045affd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for TemporaryEmailServiceTests.AuthenticationServiceTests.testCreateAccount_WhenSuccessful_ReturnsEmailAccount() async throws -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "80"
+                  endingLineNumber = "80"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  uuid = "EFD1FA6B-DBE9-446C-B2B1-B8245880B82A - 9fac0c063582af63"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for TemporaryEmailServiceTests.AuthenticationServiceTests.testCreateAccount_WhenSuccessful_ReturnsEmailAccount() async throws -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "80"
+                  endingLineNumber = "80"
+                  offsetFromSymbolStart = "95">
+               </Location>
+               <Location
+                  uuid = "EFD1FA6B-DBE9-446C-B2B1-B8245880B82A - c5cf86ee7ec40ee2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for TemporaryEmailServiceTests.AuthenticationServiceTests.testCreateAccount_WhenSuccessful_ReturnsEmailAccount() async throws -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/AuthenticationService/AuthenticationServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "80"
+                  endingLineNumber = "80"
+                  offsetFromSymbolStart = "137">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0F71936B-600C-406C-83DE-14A87759ACD7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "Yes"
+            filePath = "TemporaryEmailServiceTests/Helpers/ModelsMockURLProtocol.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "stopLoading()"
+            landmarkType = "7">
+            <Actions>
+               <BreakpointActionProxy
+                  ActionExtensionID = "Xcode.BreakpointAction.DebuggerCommand">
+                  <ActionContent
+                     consoleCommand = "po &quot;stopLoading -&gt; \(ModelsMockURLProtocol.stubResponseData)&quot;">
+                  </ActionContent>
+               </BreakpointActionProxy>
+            </Actions>
+            <Locations>
+               <Location
+                  uuid = "0F71936B-600C-406C-83DE-14A87759ACD7 - 77cb09eb10bb3539"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TemporaryEmailServiceTests.ModelsMockURLProtocol.stopLoading() -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/Helpers/ModelsMockURLProtocol.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  uuid = "0F71936B-600C-406C-83DE-14A87759ACD7 - 77cb09eb10bb34ff"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TemporaryEmailServiceTests.ModelsMockURLProtocol.stopLoading() -&gt; ()"
+                  moduleName = "TemporaryEmailServiceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailServiceTests/Helpers/ModelsMockURLProtocol.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "288937BB-E766-46B1-8D4B-06E853205765"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "Yes"
+            filePath = "TemporaryEmailService/Authentication/AuthenticationService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "createAccount(email:password:)"
+            landmarkType = "7">
+            <Actions>
+               <BreakpointActionProxy
+                  ActionExtensionID = "Xcode.BreakpointAction.DebuggerCommand">
+                  <ActionContent
+                     consoleCommand = "po response">
+                  </ActionContent>
+               </BreakpointActionProxy>
+            </Actions>
+            <Locations>
+               <Location
+                  uuid = "288937BB-E766-46B1-8D4B-06E853205765 - 52f4481905e9096d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for TemporaryEmailService.AuthenticationService.createAccount(email: Swift.String, password: Swift.String) async throws -&gt; TemporaryEmailService.EmailAccount"
+                  moduleName = "TemporaryEmailService"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailService/Authentication/AuthenticationService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "89"
+                  endingLineNumber = "89"
+                  offsetFromSymbolStart = "174">
+               </Location>
+               <Location
+                  uuid = "288937BB-E766-46B1-8D4B-06E853205765 - 52f4481905e9096d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for TemporaryEmailService.AuthenticationService.createAccount(email: Swift.String, password: Swift.String) async throws -&gt; TemporaryEmailService.EmailAccount"
+                  moduleName = "TemporaryEmailService"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailService/Authentication/AuthenticationService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "89"
+                  endingLineNumber = "89"
+                  offsetFromSymbolStart = "183">
+               </Location>
+               <Location
+                  uuid = "288937BB-E766-46B1-8D4B-06E853205765 - 52f4481905e9096d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for TemporaryEmailService.AuthenticationService.createAccount(email: Swift.String, password: Swift.String) async throws -&gt; TemporaryEmailService.EmailAccount"
+                  moduleName = "TemporaryEmailService"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailService/Authentication/AuthenticationService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "89"
+                  endingLineNumber = "89"
+                  offsetFromSymbolStart = "636">
+               </Location>
+               <Location
+                  uuid = "288937BB-E766-46B1-8D4B-06E853205765 - 52f4481905e9096d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for TemporaryEmailService.AuthenticationService.createAccount(email: Swift.String, password: Swift.String) async throws -&gt; TemporaryEmailService.EmailAccount"
+                  moduleName = "TemporaryEmailService"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailService/Authentication/AuthenticationService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "89"
+                  endingLineNumber = "89"
+                  offsetFromSymbolStart = "882">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DB41BC70-D599-4196-AD0F-252476EC21B6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "Yes"
+            filePath = "TemporaryEmailService/Authentication/AuthenticationService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "createAccount(email:password:)"
+            landmarkType = "7">
+            <Actions>
+               <BreakpointActionProxy
+                  ActionExtensionID = "Xcode.BreakpointAction.DebuggerCommand">
+                  <ActionContent
+                     consoleCommand = "po error">
+                  </ActionContent>
+               </BreakpointActionProxy>
+            </Actions>
+            <Locations>
+               <Location
+                  uuid = "DB41BC70-D599-4196-AD0F-252476EC21B6 - 166ac24c0cd3232a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for TemporaryEmailService.AuthenticationService.createAccount(email: Swift.String, password: Swift.String) async throws -&gt; TemporaryEmailService.EmailAccount"
+                  moduleName = "TemporaryEmailService"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailService/Authentication/AuthenticationService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "91"
+                  endingLineNumber = "91"
+                  offsetFromSymbolStart = "236">
+               </Location>
+               <Location
+                  uuid = "DB41BC70-D599-4196-AD0F-252476EC21B6 - 166ac24c0cd3232a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for TemporaryEmailService.AuthenticationService.createAccount(email: Swift.String, password: Swift.String) async throws -&gt; TemporaryEmailService.EmailAccount"
+                  moduleName = "TemporaryEmailService"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailService/Authentication/AuthenticationService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "91"
+                  endingLineNumber = "91"
+                  offsetFromSymbolStart = "253">
+               </Location>
+               <Location
+                  uuid = "DB41BC70-D599-4196-AD0F-252476EC21B6 - 166ac24c0cd3232a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for TemporaryEmailService.AuthenticationService.createAccount(email: Swift.String, password: Swift.String) async throws -&gt; TemporaryEmailService.EmailAccount"
+                  moduleName = "TemporaryEmailService"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailService/Authentication/AuthenticationService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "91"
+                  endingLineNumber = "91"
+                  offsetFromSymbolStart = "230">
+               </Location>
+               <Location
+                  uuid = "DB41BC70-D599-4196-AD0F-252476EC21B6 - 166ac24c0cd3232a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for TemporaryEmailService.AuthenticationService.createAccount(email: Swift.String, password: Swift.String) async throws -&gt; TemporaryEmailService.EmailAccount"
+                  moduleName = "TemporaryEmailService"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TemporaryEmail/TemporaryEmailService/TemporaryEmailService/Authentication/AuthenticationService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "91"
+                  endingLineNumber = "91"
+                  offsetFromSymbolStart = "247">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "862B1783-57F6-4AEA-B302-13F91FC8DF02"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "Yes"
+            filePath = "TemporaryEmailServiceTests/Helpers/ModelsMockURLProtocol.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "startLoading()"
+            landmarkType = "7">
+            <Actions>
+               <BreakpointActionProxy
+                  ActionExtensionID = "Xcode.BreakpointAction.DebuggerCommand">
+                  <ActionContent
+                     consoleCommand = "po &quot;startLoading Error =&gt; \(error)&quot;">
+                  </ActionContent>
+               </BreakpointActionProxy>
+            </Actions>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

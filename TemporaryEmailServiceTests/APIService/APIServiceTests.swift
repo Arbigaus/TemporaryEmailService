@@ -135,7 +135,7 @@ final class APIServiceTests: XCTestCase {
 
     private func makeGetFromSUT(with endpoint: String) async -> FakeResult {
         do {
-            let result = try await makeSUT().get(endpoint: endpoint)
+            let result: FakeResponseType = try await makeSUT().get(endpoint: endpoint)
             return .success([result])
         } catch (let error as NSError) {
             return .failure(error)
@@ -145,7 +145,7 @@ final class APIServiceTests: XCTestCase {
     private func makePostFromSUT(with endpoint: String, payload: FakePayloadType?) async -> FakeResult {
         let (optionalPayload, _) = makePayload()
         do {
-            let result = try await makeSUT().post(endpoint: "postTest", payload: payload ?? optionalPayload)
+            let result: FakeResponseType = try await makeSUT().post(endpoint: "postTest", payload: payload ?? optionalPayload)
             return .success([result])
         } catch (let error as NSError) {
             return .failure(error)
@@ -155,7 +155,7 @@ final class APIServiceTests: XCTestCase {
     private func makePutFromSUT(with endpoint: String, payload: FakePayloadType?) async -> FakeResult {
         let (optionalPayload, _) = makePayload()
         do {
-            let result = try await makeSUT().put(endpoint: "postTest", payload: payload ?? optionalPayload)
+            let result: FakeResponseType = try await makeSUT().put(endpoint: "postTest", payload: payload ?? optionalPayload)
             return .success([result])
         } catch (let error as NSError) {
             return .failure(error)
@@ -166,8 +166,8 @@ final class APIServiceTests: XCTestCase {
         HTTPURLResponse(url: anyURL(), statusCode: code, httpVersion: nil, headerFields: nil)
     }
 
-    private func makeSUT(file: StaticString = #filePath, line: UInt = #line) -> APIService<FakeResponseType, FakePayloadType> {
-        let sut = APIService<FakeResponseType, FakePayloadType>(baseUrl: baseURL())
+    private func makeSUT(file: StaticString = #filePath, line: UInt = #line) -> APIService {
+        let sut = APIService(baseUrl: baseURL())
         trackForMemoryLeaks(sut, file: file, line: line)
         return sut
     }

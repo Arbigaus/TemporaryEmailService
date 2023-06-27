@@ -8,15 +8,12 @@
 import Foundation
 
 protocol APIServiceProtocol {
-    associatedtype ResponseType: Decodable
-    associatedtype PayloadType: Encodable
-
-    func get(endpoint: String) async throws -> ResponseType
-    func post(endpoint: String, payload: PayloadType) async throws -> ResponseType
-    func put(endpoint: String, payload: PayloadType) async throws -> ResponseType
+    func get<ResponseType: Decodable>(endpoint: String) async throws -> ResponseType
+    func post<ResponseType: Decodable, PayloadType: Encodable>(endpoint: String, payload: PayloadType) async throws -> ResponseType
+    func put<ResponseType: Decodable, PayloadType: Encodable>(endpoint: String, payload: PayloadType) async throws -> ResponseType
 }
 
-final class APIService<ResponseType: Decodable, PayloadType: Encodable>: APIServiceProtocol {
+final class APIService: APIServiceProtocol {
     // MARK: - Variables
 
     let baseURL: String
@@ -49,7 +46,7 @@ final class APIService<ResponseType: Decodable, PayloadType: Encodable>: APIServ
         return request
     }
 
-    private func handleRequest(with data: Data, and response: URLResponse) throws -> ResponseType {
+    private func handleRequest<ResponseType: Decodable>(with data: Data, and response: URLResponse) throws -> ResponseType {
         guard let statusCode = (response as? HTTPURLResponse)?.statusCode else {
             throw NSError(domain: "Response error", code: 2)
         }
@@ -62,7 +59,7 @@ final class APIService<ResponseType: Decodable, PayloadType: Encodable>: APIServ
         return decodedData
     }
 
-    func get(endpoint: String) async throws -> ResponseType {
+    func get<ResponseType: Decodable>(endpoint: String) async throws -> ResponseType {
 
         do {
             let request = createURLRequest(endpoint, method: .get)
@@ -75,7 +72,7 @@ final class APIService<ResponseType: Decodable, PayloadType: Encodable>: APIServ
         }
     }
 
-    func post(endpoint: String, payload: PayloadType) async throws -> ResponseType {
+    func post<ResponseType: Decodable, PayloadType: Encodable>(endpoint: String, payload: PayloadType) async throws -> ResponseType {
         do {
             let body = try JSONEncoder().encode(payload)
             let request = createURLRequest(endpoint, method: .post, body: body)
@@ -88,7 +85,7 @@ final class APIService<ResponseType: Decodable, PayloadType: Encodable>: APIServ
         }
     }
 
-    func put(endpoint: String, payload: PayloadType) async throws -> ResponseType {
+    func put<ResponseType: Decodable, PayloadType: Encodable>(endpoint: String, payload: PayloadType) async throws -> ResponseType {
         do {
             let body = try JSONEncoder().encode(payload)
             let request = createURLRequest(endpoint, method: .put, body: body)

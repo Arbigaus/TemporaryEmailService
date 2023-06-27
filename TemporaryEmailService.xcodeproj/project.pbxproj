@@ -15,8 +15,13 @@
 		D7381EE329ED73B300B2A2A5 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7381EE229ED73B300B2A2A5 /* APIService.swift */; };
 		D7381EE629ED76C400B2A2A5 /* APIServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7381EE529ED76C400B2A2A5 /* APIServiceTests.swift */; };
 		D7381EE929F030E600B2A2A5 /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7381EE829F030E600B2A2A5 /* XCTestCase+MemoryLeakTracking.swift */; };
+		D77D12212A38B28E008EE6CF /* ModelsMockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77D12202A38B28E008EE6CF /* ModelsMockURLProtocol.swift */; };
 		D7B8609D2A156AB600DA3FD9 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B8609C2A156AB600DA3FD9 /* AuthenticationService.swift */; };
 		D7B860A02A156B4600DA3FD9 /* PayloadType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B8609F2A156B4600DA3FD9 /* PayloadType.swift */; };
+		D7B860A32A156F1400DA3FD9 /* AuthenticationServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B860A22A156F1400DA3FD9 /* AuthenticationServiceTests.swift */; };
+		D7D9F9D32A4A79E400529C19 /* EmailAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D9F9D22A4A79E400529C19 /* EmailAccount.swift */; };
+		D7D9F9D52A4A7A0D00529C19 /* Autentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D9F9D42A4A7A0D00529C19 /* Autentication.swift */; };
+		D7D9F9D72A4A7A2200529C19 /* AccountCreation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D9F9D62A4A7A2200529C19 /* AccountCreation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +44,13 @@
 		D7381EE229ED73B300B2A2A5 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		D7381EE529ED76C400B2A2A5 /* APIServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceTests.swift; sourceTree = "<group>"; };
 		D7381EE829F030E600B2A2A5 /* XCTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
+		D77D12202A38B28E008EE6CF /* ModelsMockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelsMockURLProtocol.swift; sourceTree = "<group>"; };
 		D7B8609C2A156AB600DA3FD9 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		D7B8609F2A156B4600DA3FD9 /* PayloadType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayloadType.swift; sourceTree = "<group>"; };
+		D7B860A22A156F1400DA3FD9 /* AuthenticationServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationServiceTests.swift; sourceTree = "<group>"; };
+		D7D9F9D22A4A79E400529C19 /* EmailAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailAccount.swift; sourceTree = "<group>"; };
+		D7D9F9D42A4A7A0D00529C19 /* Autentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Autentication.swift; sourceTree = "<group>"; };
+		D7D9F9D62A4A7A2200529C19 /* AccountCreation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCreation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,13 +134,25 @@
 			children = (
 				D7381EE829F030E600B2A2A5 /* XCTestCase+MemoryLeakTracking.swift */,
 				D72203FF29F9EEA50069F4ED /* URLProtocolMock.swift */,
+				D77D12202A38B28E008EE6CF /* ModelsMockURLProtocol.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		D77D121F2A38A40A008EE6CF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D7D9F9D22A4A79E400529C19 /* EmailAccount.swift */,
+				D7D9F9D42A4A7A0D00529C19 /* Autentication.swift */,
+				D7D9F9D62A4A7A2200529C19 /* AccountCreation.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		D7B8609B2A156AA000DA3FD9 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				D77D121F2A38A40A008EE6CF /* Models */,
 				D7B8609C2A156AB600DA3FD9 /* AuthenticationService.swift */,
 			);
 			path = Authentication;
@@ -147,6 +169,7 @@
 		D7B860A12A156EBF00DA3FD9 /* AuthenticationService */ = {
 			isa = PBXGroup;
 			children = (
+				D7B860A22A156F1400DA3FD9 /* AuthenticationServiceTests.swift */,
 			);
 			path = AuthenticationService;
 			sourceTree = "<group>";
@@ -262,8 +285,11 @@
 			files = (
 				D7B860A02A156B4600DA3FD9 /* PayloadType.swift in Sources */,
 				D7B8609D2A156AB600DA3FD9 /* AuthenticationService.swift in Sources */,
+				D7D9F9D52A4A7A0D00529C19 /* Autentication.swift in Sources */,
 				D7381EE329ED73B300B2A2A5 /* APIService.swift in Sources */,
+				D7D9F9D72A4A7A2200529C19 /* AccountCreation.swift in Sources */,
 				D7381ECC29ED738200B2A2A5 /* TemporaryEmailService.docc in Sources */,
+				D7D9F9D32A4A79E400529C19 /* EmailAccount.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,8 +298,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7381EE629ED76C400B2A2A5 /* APIServiceTests.swift in Sources */,
+				D77D12212A38B28E008EE6CF /* ModelsMockURLProtocol.swift in Sources */,
 				D7381ED729ED738300B2A2A5 /* TemporaryEmailServiceTests.swift in Sources */,
 				D7381EE929F030E600B2A2A5 /* XCTestCase+MemoryLeakTracking.swift in Sources */,
+				D7B860A32A156F1400DA3FD9 /* AuthenticationServiceTests.swift in Sources */,
 				D722040029F9EEA50069F4ED /* URLProtocolMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
