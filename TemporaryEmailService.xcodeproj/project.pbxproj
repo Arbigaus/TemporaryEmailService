@@ -10,7 +10,6 @@
 		D722040029F9EEA50069F4ED /* URLProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72203FF29F9EEA50069F4ED /* URLProtocolMock.swift */; };
 		D7381ECC29ED738200B2A2A5 /* TemporaryEmailService.docc in Sources */ = {isa = PBXBuildFile; fileRef = D7381ECB29ED738200B2A2A5 /* TemporaryEmailService.docc */; };
 		D7381ED229ED738300B2A2A5 /* TemporaryEmailService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7381EC729ED738200B2A2A5 /* TemporaryEmailService.framework */; };
-		D7381ED729ED738300B2A2A5 /* TemporaryEmailServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7381ED629ED738300B2A2A5 /* TemporaryEmailServiceTests.swift */; };
 		D7381ED829ED738300B2A2A5 /* TemporaryEmailService.h in Headers */ = {isa = PBXBuildFile; fileRef = D7381ECA29ED738200B2A2A5 /* TemporaryEmailService.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D7381EE329ED73B300B2A2A5 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7381EE229ED73B300B2A2A5 /* APIService.swift */; };
 		D7381EE629ED76C400B2A2A5 /* APIServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7381EE529ED76C400B2A2A5 /* APIServiceTests.swift */; };
@@ -40,7 +39,6 @@
 		D7381ECA29ED738200B2A2A5 /* TemporaryEmailService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TemporaryEmailService.h; sourceTree = "<group>"; };
 		D7381ECB29ED738200B2A2A5 /* TemporaryEmailService.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = TemporaryEmailService.docc; sourceTree = "<group>"; };
 		D7381ED129ED738300B2A2A5 /* TemporaryEmailServiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TemporaryEmailServiceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D7381ED629ED738300B2A2A5 /* TemporaryEmailServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemporaryEmailServiceTests.swift; sourceTree = "<group>"; };
 		D7381EE229ED73B300B2A2A5 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		D7381EE529ED76C400B2A2A5 /* APIServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceTests.swift; sourceTree = "<group>"; };
 		D7381EE829F030E600B2A2A5 /* XCTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
@@ -108,7 +106,6 @@
 				D7B860A12A156EBF00DA3FD9 /* AuthenticationService */,
 				D7381EE729F030D600B2A2A5 /* Helpers */,
 				D7381EE429ED76B300B2A2A5 /* APIService */,
-				D7381ED629ED738300B2A2A5 /* TemporaryEmailServiceTests.swift */,
 			);
 			path = TemporaryEmailServiceTests;
 			sourceTree = "<group>";
@@ -299,7 +296,6 @@
 			files = (
 				D7381EE629ED76C400B2A2A5 /* APIServiceTests.swift in Sources */,
 				D77D12212A38B28E008EE6CF /* ModelsMockURLProtocol.swift in Sources */,
-				D7381ED729ED738300B2A2A5 /* TemporaryEmailServiceTests.swift in Sources */,
 				D7381EE929F030E600B2A2A5 /* XCTestCase+MemoryLeakTracking.swift in Sources */,
 				D7B860A32A156F1400DA3FD9 /* AuthenticationServiceTests.swift in Sources */,
 				D722040029F9EEA50069F4ED /* URLProtocolMock.swift in Sources */,
