@@ -1,5 +1,7 @@
 # Temporary Email Service
 
+[![Swift](https://github.com/Arbigaus/TemporaryEmailService/actions/workflows/swift.yml/badge.svg?branch=main)](https://github.com/Arbigaus/TemporaryEmailService/actions/workflows/swift.yml)
+
 This library uses the [10 Minute Mail API](https://docs.mail.gw), created with the learning purpose.
 
 ## General Information
